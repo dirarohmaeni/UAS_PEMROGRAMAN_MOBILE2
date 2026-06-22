@@ -21,17 +21,7 @@ Aplikasi Pengingat Minum Obat berbasis Android Studio.
 
 ## Tampilan UI
 
-### Splash Screen
-![Splash](screenshots/splash1.png)
-
-### Login
-![Login](screenshots/login.png)
-
-### Home
-![Home](screenshots/home.png)
-
-### Riwayat
-![Riwayat](screenshots/riwayat.png)
+![foto](https://github.com/dirarohmaeni/UAS_PEMROGRAMAN_MOBILE2/blob/862b8b97f17c439eb534e108351f047bd16d9f2b/finalMobile2.png)
 
 ## Cara Menjalankan
 
