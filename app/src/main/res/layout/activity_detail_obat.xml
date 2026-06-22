@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <!-- HEADER -->
+    <FrameLayout
+        android:id="@+id/header"
+        android:layout_width="0dp"
+        android:layout_height="130dp"
+        android:background="@drawable/header_all"
+        android:elevation="4dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Detail Obat"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"/>
+
+    </FrameLayout>
+
+    <!-- ISI -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_card2"
+            android:orientation="vertical"
+            android:padding="18dp"
+            android:layout_marginTop="12dp">
+
+            <!-- NAMA -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama Obat"
+                android:textSize="12sp"
+                android:textColor="@color/text_grey"/>
+
+            <TextView
+                android:id="@+id/tvNama"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Paracetamol"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_dark"
+                android:layout_marginTop="2dp"/>
+
+            <!-- DESKRIPSI -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Deskripsi"
+                android:layout_marginTop="16dp"
+                android:textSize="12sp"
+                android:textColor="@color/text_grey"/>
+
+            <TextView
+                android:id="@+id/tvDeskripsi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Digunakan untuk meredakan demam dan nyeri ringan."
+                android:textSize="13sp"
+                android:textColor="@color/text_dark"
+                android:layout_marginTop="4dp"/>
+
+            <!-- DURASI -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Durasi"
+                android:layout_marginTop="16dp"
+                android:textSize="12sp"
+                android:textColor="@color/text_grey"/>
+
+            <TextView
+                android:id="@+id/tvDurasi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3 Hari"
+                android:background="@drawable/bg_chip2"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="4dp"
+                android:textSize="12sp"
+                android:layout_marginTop="6dp"/>
+
+            <!-- DOSIS -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dosis"
+                android:layout_marginTop="16dp"
+                android:textSize="12sp"
+                android:textColor="@color/text_grey"/>
+
+            <TextView
+                android:id="@+id/tvDosis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1 Tablet"
+                android:background="@drawable/bg_chip2"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="4dp"
+                android:textSize="12sp"
+                android:layout_marginTop="6dp" />
+
+            <!-- 🔥 STATUS (BARU) -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status"
+                android:layout_marginTop="16dp"
+                android:textSize="12sp"
+                android:textColor="@color/text_grey"/>
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="6dp"
+                android:text="🔴 Belum diminum"
+                android:background="@drawable/bg_chip2"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="4dp"
+                android:textSize="12sp"
+                android:layout_marginTop="6dp"/>
+
+        </LinearLayout>
+
+        <!-- BUTTON UTAMA -->
+        <TextView
+            android:id="@+id/btnSudah"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginHorizontal="24dp"
+            android:background="@drawable/btn_primary"
+            android:gravity="center"
+            android:text="Tandai Sudah Minum"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:elevation="8dp"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/btn_edit"
+                android:layout_width="100dp"
+                android:layout_height="44dp"
+                android:background="@drawable/btn_edit_bg"
+                android:gravity="center"
+                android:text="Edit Obat"
+                android:textColor="#6FA8DC"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"/>
+
+            <TextView
+                android:id="@+id/btn_hapus"
+                android:layout_width="100dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="12dp"
+                android:background="@drawable/btn_hapus_bg"
+                android:gravity="center"
+                android:text="Hapus"
+                android:textColor="#EB5757"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,9 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- WARNA -->
+    <solid android:color="#EEF2F7"/>
+
+    <!-- RADIUS SESUAI DESAIN -->
+    <corners android:radius="30dp"/>
+
+</shape>

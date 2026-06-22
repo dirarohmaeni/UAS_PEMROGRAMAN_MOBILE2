@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F7FB">
+
+    <!-- SCROLL CONTENT -->
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNav"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp">
+
+            <!-- HEADER -->
+            <LinearLayout
+                android:id="@+id/header"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="47dp"
+                android:background="@drawable/card_hello"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="40dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <!-- TEXT -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvNama"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SELAMAT DATANG"
+                        android:textColor="#FFFFFF"
+                        android:textSize="22sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/tvTanggal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Minggu, 24 Mei 2026"
+                        android:textColor="#EAF2FF"
+                        android:textSize="12sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Di Pengingat Minum Obat"
+                        android:textColor="#EAF2FF"
+                        android:textSize="14sp"/>
+                </LinearLayout>
+
+                <!-- IMAGE -->
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/logo_utama"/>
+            </LinearLayout>
+
+            <!-- CARD KONSULTASI -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardKonsultasi"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="8dp"
+                app:layout_constraintTop_toBottomOf="@id/header"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Konsultasi Keluhan"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/etKeluhan"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/input_bg"
+                        android:hint="Saya sakit apa ya..."
+                        android:padding="10dp"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnCari"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Cari Saran"
+                        android:textColor="#FFFFFF"
+                        app:backgroundTint="@null"
+                        android:background="@drawable/btn_gradient"/>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- CARD REKOMENDASI -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardRekomendasi"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="12dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="8dp"
+                app:layout_constraintTop_toBottomOf="@id/cardKonsultasi"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rekomendasi"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/tvRekomendasi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:layout_marginTop="6dp"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnTambah"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Tambahkan ke Jadwal"
+                        android:textColor="#FFFFFF"
+                        app:backgroundTint="@null"
+                        android:background="@drawable/btn_gradient"/>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- CARD OBAT -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardObatHariIni"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="20dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="8dp"
+                app:layout_constraintTop_toBottomOf="@id/cardRekomendasi"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Obat Hari Ini"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="#111827"/>
+
+                    <LinearLayout
+                        android:id="@+id/containerHariIni"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="12dp"/>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <!-- NAVBAR -->
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:orientation="horizontal"
+        android:background="#FFFFFF"
+        android:paddingTop="6dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- HOME -->
+        <LinearLayout
+            android:id="@+id/navHome"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:id="@+id/iconHome"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@drawable/home"
+                app:tint="#5B8DEF"/>
+
+            <TextView
+                android:id="@+id/txtHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textSize="11sp"
+                android:textColor="#5B8DEF"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+
+        <!-- OBAT -->
+        <LinearLayout
+            android:id="@+id/navObat"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:id="@+id/iconObat"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@drawable/icon_obat"
+                app:tint="#9CA3AF"/>
+
+            <TextView
+                android:id="@+id/txtObat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Obat"
+                android:textSize="11sp"
+                android:textColor="#9CA3AF"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+
+        <!-- RIWAYAT -->
+        <LinearLayout
+            android:id="@+id/navRiwayat"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:id="@+id/iconRiwayat"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@drawable/riwayat"
+                app:tint="#9CA3AF"/>
+
+            <TextView
+                android:id="@+id/txtRiwayat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Riwayat"
+                android:textSize="11sp"
+                android:textColor="#9CA3AF"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
